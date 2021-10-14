@@ -1,0 +1,44 @@
+<%- include("header") -%>
+    <div class="box">
+        <span>
+            <%= kindOfDay %>
+        </span>
+    </div>
+
+    <img src="images/girlright.png" alt="girlright" width="40px" height="90px">
+
+
+    <div class="quote">
+        <span>Have a super<br><span style="margin-left: 27px;">productive</span> <br><span
+                style="margin-left: 89px;">day!!</span></span>
+    </div>
+
+    <div class="quotee">
+        <span">Lesssgoooo!</span>
+    </div>
+
+    <div>
+        <span class="top"></span>
+    </div>
+
+    <div>
+        <span class="toptext">to-do</span>
+    </div>
+
+    <div class="formlist">
+        <% newListItems.forEach (function(item) { %>
+            <form action="/delete" method="post">
+            <div class="item">
+                <input type="checkbox" name="checkbox" value="<%=item._id%>" onChange="this.form.submit()">
+                <p><%= item.name %></p>
+            </div>
+            </form>
+        <% }) %>
+
+                <form class="item1" action="/" method="post">
+                    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                    <button type="submit" name="button">+</button>
+                </form>
+    </div>
+
+    <%- include("footer") -%>
