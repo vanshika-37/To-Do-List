@@ -1,44 +1,64 @@
 <%- include("header") -%>
-    <div class="box">
-        <span>
+
+    <div class="flex-container1">
+        <div class="flex1">
+            <img src="images/girlright.png" alt="girlright" width="40px" height="90px">
+
+        </div>
+        <div class="flex2 box">
             <%= kindOfDay %>
-        </span>
+        </div>
     </div>
+   
 
-    <img src="images/girlright.png" alt="girlright" width="40px" height="90px">
-
-
-    <div class="quote">
-        <span>Have a super<br><span style="margin-left: 27px;">productive</span> <br><span
-                style="margin-left: 89px;">day!!</span></span>
-    </div>
-
-    <div class="quotee">
-        <span">Lesssgoooo!</span>
-    </div>
-
-    <div>
-        <span class="top"></span>
-    </div>
-
-    <div>
-        <span class="toptext">to-do</span>
-    </div>
-
-    <div class="formlist">
-        <% newListItems.forEach (function(item) { %>
-            <form action="/delete" method="post">
-            <div class="item">
-                <input type="checkbox" name="checkbox" value="<%=item._id%>" onChange="this.form.submit()">
-                <p><%= item.name %></p>
+   
+    <div class="flex-container">
+        <div class="flex1 list">
+            <!-- <div>
+                <span class="top"></span>
+            </div> -->
+        
+            <div>
+                <p class="toptext">to-do</p>
             </div>
-            </form>
-        <% }) %>
 
-                <form class="item1" action="/" method="post">
-                    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-                    <button type="submit" name="button">+</button>
-                </form>
+            <div class="formlist">
+                <% newListItems.forEach (function(item) { %>
+                    <form action="/delete" method="post">
+                        <div class="item">
+                            <input type="checkbox" name="checkbox" value="<%=item._id%>" onChange="this.form.submit()">
+                            <p>
+                                <%= item.name %>
+                            </p>
+                        </div>
+                    </form>
+                    <% }) %>
+
+                        <form class="item1" action="/" method="post">
+                            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                            <button type="submit" name="button">+</button>
+                        </form>
+            </div>
+
+
+        </div>
+
+        <div class="flex2 quote">
+            <!-- <span>Have a super<br><span style="margin-left: 27px;">productive</span> <br><span
+                    style="margin-left: 89px;">day!!</span></span> -->
+                <p>Have a super</p>
+                <p>productive</p>
+                <p>day!!</p>
+                <p>Lesssgoooo!</p>
+        </div>
+
     </div>
+
+
+    <!-- <div class="quotee">
+        <span">Lesssgoooo!</span>
+    </div> -->
+
+    
 
     <%- include("footer") -%>

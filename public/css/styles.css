@@ -4,37 +4,45 @@ html {
   background-size: 40px 100%;
   font-family: 'Roboto', sans-serif;
 }
+
+
+body{
+  text-align: center;
+}
 .box {
   font-family: 'Just Another Hand', 'Arial';
   /* font-family: 'Shadows Into Light', cursive; */
   font-size: 3.1rem;
   font-weight: 500;
-  margin-top: 40px;
   display: inline-block;
-  position: absolute;
-  right: 80px;
-  position: fixed;
+  margin-left: 50%;
+  margin-top: 3%;
+ 
 }
 
-.girl {
-  margin-top: 40px;
+img {
+  /* margin-top: 40px; */
   display: inline-block;
-  position: absolute;
-  left: 80px;
-  position: fixed;
+  /* position: absolute; */
+  /* left: 80px; */
+  /* position: fixed; */
+  margin-right: 50%;
+  margin-top: 8%;
 }
 
 .quote {
   color: #1D3D53;
   font-family: 'Roboto', sans-serif;
-  font-size: 3rem;
-  line-height: 1.5;
+  font-size: 2.5rem;
+  line-height: 0.8;
   font-weight: 670;
-  margin-top: 190px;
+  margin-top: 7%;
   display: inline-block;
-  position: absolute;
-  right: 200px;
-  position: fixed;
+  text-align: center;
+  margin-right: 2%;
+  /* position: absolute; */
+  /* right: 200px; */
+  /* position: fixed; */
 }
 .quotee {
   color: #1D3D53;
@@ -44,22 +52,24 @@ html {
   font-weight: 670;
   margin-top: 430px;
   display: inline-block;
-  position: absolute;
+  /* position: absolute; */
   right: 200px;
   position: fixed;
 }
 
 .top {
  
-  margin-top: 160px;
+  margin-top: 50px;
   display: inline-block;
   position: absolute;
-  left: 260px;
+  left: 100px;
   padding-left:0px;
   padding-top: 60px;
   padding-right: 178px;
-  background-image: url('../images/todobg.png');
+  /* background-image: url('../images/todobg.png'); */
+  background-color: #ffc0c5;
   background-size: contain;
+  z-index: -1;
 }
 
 .toptext {
@@ -67,10 +77,15 @@ html {
  
   font-size: 3.1rem;
   font-weight: 500;
-  margin-top: 160px;
+  /* margin-top: 160px; */
   display: inline-block;
-  position: absolute;
-  left: 320px;
+  /* position: absolute; */
+  /* left: 320px; */
+  /* text-align: center; */
+  background-color: #ffc0c5;
+  padding: 1.7% 10%;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
 }
 
 .copyright {
@@ -87,10 +102,10 @@ html {
 }
 
 .formlist {
-  margin-top: 230px;
+  /* margin-top: 230px; */
   display: inline-block;
-  position: absolute;
-  left: 210px;
+  /* position: absolute; */
+  /* left: 210px; */
   max-width: 400px;
   background: #1d3d53;
 }
@@ -170,10 +185,31 @@ footer {
   width: 100%;
 }
 
-img {
+/* img {
   margin-top: 25px;
   display: inline-block;
   position: absolute;
   left: 80px;
   position: fixed;
+} */
+
+/* ________________________________________________________________ */
+
+.flex-container, .flex-container1{
+
+  display: flex;
+}
+.flex1, .flex2{
+  flex: 1;
+}
+.list{
+  text-align: center;
+}
+
+
+@media (max-width: 600px){
+  .flex-container{
+    display: inline-block;
+    text-align: center;
+  }
 }
