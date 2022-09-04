@@ -83,6 +83,7 @@ html {
   display: inline-block;
   position: absolute;
   right: 485px;
+  /* text-align: center; */
 }
 
 .formlist {
@@ -147,12 +148,15 @@ input[type="text"]:focus {
 
 input[type="checkbox"] {
   margin: 20px;
+  margin-right: 10px;
+  transition: 2s;
 }
 
 input:checked+p {
   text-decoration: line-through;
   text-decoration-color: white;
   text-decoration-thickness: 0.15rem;
+  /* transform: rotate(360deg); */
 }
 
 ::placeholder {
